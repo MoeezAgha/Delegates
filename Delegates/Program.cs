@@ -14,6 +14,8 @@ namespace Delegates
             videoEncoder.VideoEncodedEvent += mailService.OnVideoEncoded;
             videoEncoder.VideoEncodedEvent += textService.OnVideoEncoded;
 
+            var MailService2 = new MailService2();
+
             videoEncoder.Encode(video);
         }
 
@@ -31,6 +33,17 @@ namespace Delegates
 
     }
 
+    public class MailService2
+    {
+
+        public void OnVideoEncoded(object source, VideoEventArgs eventArgs)
+        {
+
+            Console.WriteLine("MailService2 :Send a text:" + eventArgs.Name);
+
+        }
+
+    }
     public class TextService
     {
 

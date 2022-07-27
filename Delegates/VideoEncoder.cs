@@ -15,7 +15,7 @@ namespace Delegates
 
         //EventHandler
         //EventHandler<TeventArgs>
-        //public event VideoEncoderEventHandler VideoEncodedEvent;//Event name
+        // public event VideoEncoderEventHandler VideoEncodedEvent;//Event name
 
         public event EventHandler<VideoEventArgs> VideoEncodedEvent;
 
